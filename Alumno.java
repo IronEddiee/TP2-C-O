@@ -1,4 +1,5 @@
 public class Alumno {
+   //atributos
    private int nombre, años, dni, grado, nroLegajo, sexo;
    private String Nombre;
    private int Años;
@@ -52,7 +53,11 @@ public class Alumno {
       this.NroLegajo= nroLegajo;
    }
    public void setSexo(char sexo){
-      this.Sexo= sexo;
+      if (sexo == 'M' | sexo == 'F'){
+         this.Sexo= sexo;
+      }else{
+         System.out.println("La letra ingresada no es valida");
+      }
    }
    public void datosAlumno(){
    System.out.println("DATOS DEL ALUMNO");
