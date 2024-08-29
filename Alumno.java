@@ -1,72 +1,75 @@
 public class Alumno {
    //atributos
-   private int nombre, años, dni, grado, nroLegajo, sexo;
-   private String Nombre;
-   private int Años;
-   private int Dni;
-   private char Grado;
-   private int NroLegajo;
-   private char Sexo;
+   private String nombre;
+   private int dni;
+   private int diaN;
+   private String mesN;
+   private int añoN;
+   private int nroLegajo;
+   private char sexo;
    
-   //constructor
-   public Alumno (String nombre, int años, int dni, char grado, int nroLegajo, char sexo){
-      this.Nombre= nombre;
-      this.Años= años;
-      this.Dni= dni;
-      this.Grado= grado;
-      this.NroLegajo= nroLegajo;
-      this.Sexo= sexo;
-   }
-   //metodos get
-   public String getNombre() {
-      return Nombre;
-   }
-   public int getAños(){
-      return Años;
+   //Constructor
+   public Alumno (String nombre, int dni, int dia, String mes, int año, int legajo, char sexo){
+      this.nombre= nombre;
+      this.dni= dni;
+      this.diaN= dia;
+      this.mesN= mes;
+      this.añoN= año;
+      this.nroLegajo= legajo;
+      this.sexo= sexo;
+   } 
+   //metodo get
+   public String getNombre(){
+      return nombre;
    }
    public int getDni(){
-      return Dni;
+      return dni;
    }
-   public char getGrado(){
-      return Grado;
+   public int getDiaN(){
+      return diaN;
+   }
+   public String getMesN(){
+      return mesN;
+   }
+   public int getAñoN(){
+      return añoN;
    }
    public int getNroLegajo(){
-      return NroLegajo;
+      return nroLegajo;
    }
    public char getSexo(){
-      return Sexo;
-   }
-   //metodo set
-   public void setNombre(String nombre){
-      this.Nombre= nombre;
-   }
-   public void setAños(int años){
-      this.Años= años;
-   }
-   public void setDni(int dni){
-      this.Dni= dni;
-   }
-   public void setGrado(char grado){
-      this.Grado= grado;
-   }   
-   public void setNroLegajo( int nroLegajo){
-      this.NroLegajo= nroLegajo;
-   }
-   public void setSexo(char sexo){
-      if (sexo == 'M' | sexo == 'F'){
-         this.Sexo= sexo;
-      }else{
-         System.out.println("La letra ingresada no es valida");
-      }
-   }
-   public void datosAlumno(){
-   System.out.println("DATOS DEL ALUMNO");
-   System.out.println("Nombre y Apellido: " + getNombre());
-   System.out.println("Edad: " + getAños());
-   System.out.println("DNI: " + getDni());
-   System.out.println("Sexo: " + getSexo());
-   System.out.println("Grado: " + getGrado());
-   System.out.println("Numero de legajo: " + getNroLegajo() + "\n");
+      return sexo;
    }
    
+   //metodo set
+   public void setNombre(String Nombre){
+      this.nombre= Nombre;
+   }
+   public void setDni(int Dni){
+      this.dni= Dni;
+   }
+   public void setDiaN(int Dia){
+      this.diaN= Dia;
+   }
+   public void setMesN(String Mes){
+      this.mesN= Mes;
+   }
+   public void setAñoN(int Año){
+      this.añoN= Año;
+   }
+   public void setNroLegajo(int Legajo){
+      this.nroLegajo= Legajo;
+   }
+   public void setSexo(char Sexo){
+      this.sexo= Sexo;
+   }
+   
+   //metodos 
+   public void datosAlumno(){
+      System.out.println("**Datos del alumno**");
+      System.out.println("Nombre y apellido: " + getNombre());
+      System.out.println("Fecha de nacimiento: " + getDiaN() + "/" + getMesN() + "/" + getAñoN());
+      System.out.println("Sexo: " + getSexo());
+      System.out.println("Numero de legajo: " + getNroLegajo() + "\n");
+   }
 }
