@@ -58,6 +58,7 @@ public class Domicilio{
    }
    //Metodos
    public void datosDomicilios(){
-      System.out.println("Domicilio: " + getCalle() + getAltura() +  );
-   }
+      System.out.println("Domicilio: " + getCalle() + " " +  getAltura() + ", barrio: " + getBarrio() + ", localidad: " + getLocalidad() + "\n");
+      System.out.println("Codigo postal: " + getCodPostal());
+  }
 }
