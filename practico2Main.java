@@ -7,5 +7,5 @@ public class practico2Main {
    alumnoDos.datosAlumno();
    Alumno alumnoTres= new Alumno("Maria Vargas", 22, 21733657, 'A', 150, 'F');
     alumnoTres.datosAlumno();
-   }
+   } 
 }
