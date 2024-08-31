@@ -36,6 +36,6 @@ public class Telefono{
    //metodos
    public void datosTelefonos(){
       System.out.println("Contactos \n Telefono: " + getTipo() + "\n Codigo Area: " + getCodArea() + "\n Numero: " + getNumero());
-      System.out.println("Domicilio \n" + Domicilio.datosDomicilios());
+      //System.out.println("Domicilio \n" + Domicilio.datosDomicilios());
    }
 }
