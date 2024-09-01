@@ -14,8 +14,8 @@ public class practico2Main {
    Televisor tele= new Televisor (marca, pulgada);
    tele.estadoTele();
    
-   System.out.println("Seleccione una opcion");
    do{
+      System.out.println("Seleccione una opcion");
       System.out.println("1)Nivel de volumen \n 2)Subir o bajar canal \n 3)seleccionar un canal \n 4)Estado del televisor \n 5)Apagar televisor");
       opciones= Console.readInt();
       switch (opciones){
@@ -27,20 +27,28 @@ public class practico2Main {
          case 2:
          {
             tele.canales();
+            break;
          }
          case 3:
          {
             tele.controlCanal();
+            break;
          }
          case 4:
          {
             tele.dato();
+            break;
             
          }
          case 5:
          {
             System.out.println("Televisor apagado");
             bandera= true;
+            break;
+         }
+         default:
+         {
+            System.out.println("El valor ingresado no es valido, intente nuevamente");
          }
       }
       
